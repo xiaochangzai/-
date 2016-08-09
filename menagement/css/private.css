@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; text-decoration:none; list-style:none; border:none; padding:0;}
+body{ width:100%; text-decoration:none;}
+#left{ width:228px; height:760px; background:url(../images/leftbg.gif) repeat-y center;}
+#left .login{ width:211px; height:83px; padding:25px 0 0 17px;}
+#left .login .headlike{ width:95px; height:83px; float:left;}
+#left .login .hellotxt{ width:116px; height:33px; padding-top:13px; float:left;}
+#left .hymanage{ width:164px; padding:34px 0 0 30px; display:block;}
+#left .hymanage li{ width:151px; height:62px; padding-left:13px; background:url(../images/libg1.gif) no-repeat left 30px; display:block;}
+#left .hymanage li a{ width:138px; height:30px; padding-left:13px; color:#d5d5d5; font-size:15px; font-family:"微软雅黑"; font-weight:bold; background:url(../images/icon1.gif) no-repeat left 8px; display:block;}
+#left .hymanage li a:hover{ color:#fff;}
+
+
+#right{ width:100%;}
+#right #top{  height:71px; background:#364859 url(../images/topbg.gif) no-repeat left top;}
+#right #top .titlist1{ width:925px; height:49px; display:block; padding-top:15px; padding-left:121px; float:left;}
+#right #top .titlist1 li{ width:102px; height:49px; float:left; display:block;}
+
+#right #contents{ width:100%; height:688px; padding-bottom:18px;}
+#right #contents #contop{ height:25px; padding:28px 0 18px 55px;}
+#right #contents #contop #buttons{ width:542px; height:26px; float:left;}
+#right #contents #contop #buttons .btnlist{ height:26px; display:block; float:left;}
+#right #contents #contop #buttons .btnlist li{ width:101px; height:26px; display:block; float:left;}
+#right #contents #contop #search{ width:465px; height:134px; float:left;} 
+
+#right #contents .addlist{ width:729px; height:284px; padding:21px 0 0 162px;}
+#right #contents .addlist li{ width:318px; height:49px; float:left;}
+#right #contents .addlist li span{ width:100px; padding-right:9px; text-align:right; line-height:28px; font-family:"宋体"; font-size:18px; float:left; display:block; }
+#right #contents .addlist li input{ width:173px; height:20px; background:url(../images/txtbg.gif) no-repeat ; float:left; display:block;}
+
+#login{ width:400px; height:200px; margin:182px 0 0 382px !important; margin:91px 0 0 191px; background:#FFF;}
+#login #loginleft{ width:130px; height:200px; background:#828280; float:left;}
+#login #loginleft .userimg{ width:115px; height:54px; padding:15px 0 0 15px;}
+#login #loginright{ width:243px; height:171px; padding:29px 0 0 27px; float:left;}
+#login #loginright .userlogin{ width:202px; height:48px; font-family:"微软雅黑"; font-size:18px; color:#4e3135;}
+#login #loginright .userlogin span{ color:#d2d3d3; font-family:"微软雅黑"; font-size:12px;}
+#login .loginform{ width:243px;}
+#login .loginform .user{ width:208px; height:29px;}
+#login .loginform .user span{ width:41px; line-height:19px; padding-bottom:10px; color:#664947; font-family:"微软雅黑"; font-size:12px; float:left;}
+#login .loginform .loginbtn{ width:194px; height:46px; padding-top:19px; margin: 0 auto;}
+.lastli{ width:429px !important; height:39px !important;}
+.lasttxt{ width:312px!important; height:39px!important; border:#cdcccc 1px solid; background:none !important;}
+.le{ height:310px; border-top:#b4b1b4 1px solid; border-left:#b4b1b4 1px solid;}
+
+.le td{ line-height:38px; text-align:center; color:#565456; font-family:"微软雅黑"; font-size:14px;  border-right:#b4b1b4 1px solid; border-bottom:#b4b1b4 1px solid;}
+.le th{  line-height:38px; text-align:center; text-align:center; font-family:"微软雅黑"; font-size:18px; font-weight:normal!important;    border-right:#b4b1b4 1px solid; border-bottom:#b4b1b4 1px solid; background:#dbdbdb;}
+
+.bottom{ width:100%; line-height:40px; background:#eae4e9; border-top:#c7c7c7 1px solid; text-align:center; color:#584f57; font-family:"宋体"; font-size:18px;}

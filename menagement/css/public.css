@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+.admin{ width:107px; height:13px; padding-left:8px; color:#FFF; font-family:"微软雅黑"; font-size:12px; font-weight:bold;}
+.btn1{ width:75px; height:26px; text-align:center; background:url(../images/btnbg1.gif) no-repeat center; font-family:"宋体"; color:#565456; font-size:18px;}
+.btnlogin{ width:54px; height:18px; margin-right:34px !important; margin-right:17px; background:#747473; text-align:center; color:#fff; font-family:"宋体"; font-size:12px; display:block; float:left;}
+.btnsearch{ width:67px; height:32px; padding:1px 6px 3px 6px; background:url(../images/searchbg.gif) no-repeat 1px 1px; float:left;}
+.checkbox{ width:14px; height:13px; background:url(../images/checkbox.gif) no-repeat;}
+.txtsearch{ width:328px; line-height:36px; padding-left:3px; color:#565456; font-family:"宋体"; font-size:24px; background:url(../images/searchbg2.gif) no-repeat center; float:left; display:block;}
+.exit{ width:92px; height:20px; padding-top:51px; color:#fc4052!important; font-family:"宋体"; font-size:12px; float:right;} 
+.text1{ height:18px; color:#ef641e; font-family:"微软雅黑"; font-size:12px; font-weight:bold;}
+.text2{ height:15px; color:#c0c0c0; font-family:"宋体"; font-size:12px;}
+.text3{ width:146px; height:18px; line-height:18px; padding-left:13px; background:url(../images/loginbg.gif) no-repeat 3px 4px; border:#d8bab8 1px solid; float:left; display:block;}
+.text4{width:146px; height:17px; line-height:17px; padding-left:13px; background:url(../images/loginbg1.gif) no-repeat 3px 4px; border:#d8bab8 1px solid; float:left; display:block;}
+.title1{ width:228px; line-height:37px; color:#fff; text-align:center; font-family:"微软雅黑"; font-size:16px; font-weight:bold; background:url(../images/titbg1.gif) repeat-x;}
+.titimg{ width:81px; height:31px; padding-left:21px;}
+.tittxt{ width:66px; height:16px; color:#fff; font-weight:bold; font-family:"微软雅黑"; font-size:12px;}
+.tittxt a{ color:#fff;}
+.colored{ color:#fc4052;}
+.userlist{ width:107px; line-height:26px; color:#615f5f; font-family:"微软雅黑"; font-size:16px; float:left; display:block;}
+.fl{ float:left;}
+.form1{ width:407; height:26px; display:block;}
+.form2{ width:420px; heght:36px; display:block;}
+.formtable{width:919px;  padding-left:55px; display:block;}
+.updown{ width:558px; height:130px; padding-top:63px; margin:0 auto;}
+.uppage{ width:127px; height:38px; margin-right:76px; background:#999; float:left; color:#fff;}
+.downpage{ width:127px; height:38px; background:#999; float:left; color:#fff;}
+.bg{ background:url(../images/bodibu.gif) repeat;}

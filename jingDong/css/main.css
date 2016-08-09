@@ -1,0 +1,67 @@
+/* CSS Document */
+*{ width:100%; margin:0; list-style:none; padding:0; border:0;}
+a{ font-size:12px; text-decoration:none;}
+img{ margin:0;}
+.auto{ margin: 0 auto;}
+.width{ width:1210px;}
+#wrap{ width:100%; margin: 0 auto; position:relative;}
+.toptitbg{ background:#f1f1f1;}
+#toptit{ height:30px; background:url(../img/toptitbg.gif) no-repeat left;}
+.advbg{ background:#ca0022;}
+#adv{ height:80px; background:url(../img/advbg.gif) no-repeat;}
+.searchbg{background: url(../img/searchbg.gif) repeat-x bottom;}
+#search{ height:146px; background: url(../img/searchbg2.gif) no-repeat; display:block;}
+#main{ height:478px;}
+#main .ul{ width:210px; padding:10px 0 9px 0; background:#c81623; display:block; float:left;}
+.mian_li{ width:210px; height:31px; display:block; background:#009;}
+#main .ul a{ padding-right:3px; line-height: 31px; height:31px; font-family:"微软雅黑"; font-size:14px; color:#fff; text-decoration:none;}
+#main #banner{ width:730px; height:454px; margin:12px 0 0 10px; float:left; position:relative; }
+#main #banner #bannerpic{ width:730px; height:454px; display:block; position:absolute; left:0; top:0; overflow: hidden;}
+#main #banner #bannerpic ul{ width:5840px; height:454px; display:block; position:absolute; left:0; top:0;}
+#main #banner #bannerpic ul li{ width:730px; height:454px; display:block; float:left;}
+/*#main #banner #bannerpic li img{ width:730px; height:454px;}*/
+#main #menusbg{ position:absolute;  left:-10px; top:-10px; width:1000px; height:auto; display:none; z-index:10;}
+#main #banner #selectors{ width:173px; height:37px; display:block; position:absolute; bottom:0; left:279px;}
+#main #banner #selectors li{ width:18px; height:18px; padding-right:4px; text-align:center; line-height:18px; color:#fff; float:left; background:url(../img/selectorbg1.gif) no-repeat top left; display:block;}
+#main #mainright{ width:259px; height:260px; float:left;}
+#main #mainright #lifeserver{ width:251px; height:211px; background:url(../img/lifeserver.gif) repeat-x top; padding-left:10px; border-left:#e9e9e9 1px solid; display:block; position:relative;overflow: hidden; }
+#main #mainright #lifeserver #tabpage{ width:249px; height:211px; padding-top:1px; margin-left:10px; background: #fff url(../img/tabcardbg.gif) repeat-x top; position:absolute; top:210px; left:0; display: block;}
+#main #mainright #lifeserver #tabpage ul{ width:249px; height:27px; display:block;}
+#main #mainright #lifeserver #tabpage ul li{ width:61px; height:27px; text-align:center; border-left:#e4e4e4 1px solid;   border-bottom:none; border-right:none; display:block; float:left; background: #fff;}
+#main #mainright #lifeserver #tabpage ul li a{ width: 61px; height: 25px; padding-top: 2px; font-size:12px; font-family:"宋体"; text-decoration:none; color:#666666; line-height:25px; display: block;}
+#main #mainright #lifeserver #tabpage ul li a:hover{ color:#f00;}
+#main #mainright #lifeserver #tabpage #tabimg{ width:250px; height:182px; position: relative;}
+#main #mainright #lifeserver #tabpage #tabimg .close{ width: 10px; height: 10px; position: absolute; top: 17px; right: 8px; background: url(../img/closebg.gif) no-repeat;}
+#main #mainright #lifeserver #life01{ width:250px; height:71px;}
+#main #mainright #lifeserver #life01 .phonepay{ width:43px; height:21px; padding:50px 0 0 20px; background:url(../img/serverbg1.gif) no-repeat; float:left}
+#main #mainright #lifeserver #life01 .planeticket{width:43px; height:21px; padding:50px 0 0 20px; background:url(../img/serverbg2.gif) no-repeat; float:left}
+#main #mainright #lifeserver #life01 .movieticket{width:49px; height:21px; padding:50px 0 0 13px; background:url(../img/serverbg3.gif) no-repeat; float:left}
+#main #mainright #lifeserver #life01 .game{width:42px; height:21px; padding:50px 0 0 20px; background: url(../img/serverbg4.gif) no-repeat; float:left}
+#main #mainright #lifeserver #life02{ width:250px; height:139px; background:url(../img/lifeserverbg2.gif) no-repeat;}
+#main #mainright #lifeserver li{ width:62px; height:71px; border-right:#f1f1f1 1px solid; border-bottom:#f1f1f1 1px solid; float:left; display:block;}
+#bigadv{  height:0; background:url(../img/bigadv.gif) no-repeat; overflow: hidden;}
+#refer{ height:191px;}
+#frash{ height:29px; border-bottom:#d1d1d1 1px solid;}
+#frash img{ float:left; width:285px; height:29px;}
+#frash a{ width:62px; height:20px; font-family:"微软雅黑"; background:url(../img/frashbg.gif) no-repeat right 2px; float:right; display:block; color:#666666;}
+.adv1{ width:1200px; margin:0 auto;}
+.padding_0{ padding:0 !important;}
+.pre{ width:28px; height:62px; position:absolute; left:0px; top:190px; text-align:center; font-family:"宋体"; font-size:16px; color:#fff; line-height:62px; display:none; background:rgba(162,162,151,0.4);}
+.next{ width:28px; height:62px; position:absolute; right:0; top:190px; text-align:center; font-family:"宋体"; font-size:16px; color:#fff; line-height:62px; display:none; background:rgba(153,153,153,0.6)}
+.bg11{ background: url(../img/selectorbg2.gif) no-repeat !important;}
+.tablibg{ background:url(../img/tablibg.gif) repeat-x top;}
+#rightmenu{ width:94px; height:588px; background:url(../img/rightbg.gif) no-repeat right; position:fixed; top:110px; right:0;}
+#rightmenu #expand{ width:63px; height:23px; padding:87px 0 0 29px; background: url(../img/double11.gif) no-repeat; position:relative; top:-110px; right:0;}
+#rightmenu .rightul{ width:0px; height:180px; padding:178px 5px 0 59px; display:block; z-index:1;}
+#rightmenu .rightul li{ width:30px; height:36px; position:relative; z-index:1;}
+#rightmenu .rightul li span{ width:0px; height:35px; background:url(../img/goodscar1.gif) no-repeat; color:#fff; text-align:center; line-height:30px; position:absolute; top:0; right:0; display:block; z-index:-1; overflow: hidden;}
+
+#wrap #leftmenu{ width:40px; height:319px; position:fixed; top:143px; left:107px; background: #fff; display: none;}
+#wrap #leftmenu li{ width:40px; height:29px; background:url(../img/leftmenubg.gif) no-repeat bottom center; display:block;}
+#wrap #leftmenu li a{ width:40px; height:29px; color:#625351; font-family:"微软雅黑"; font-size:16px; line-height:29px; text-align:center; text-decoration:none; display:block;}
+#wrap #leftmenu li a:hover{ color:#fff !important; background:#c81623;}
+.libg1{ background:#f7f7f7; color:#ff0 !important;}
+.libg2{ color:#f00;}
+.pd{ padding-left:13px;}
+.libg3{ color: #c81623 !important;}
+.tababg{ background: url(../img/tababg.gif) no-repeat top !important;}
