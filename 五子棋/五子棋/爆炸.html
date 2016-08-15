@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>一排图片逐个爆炸，加进度条</title>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/jquery-ui.js"></script>
+		<link href="../js/jquery-ui.css" type="text/css" rel="stylesheet" />
+		<style>
+			img{ width: 50px; height: 50px;}
+		</style>
+		<script>
+		var bar;
+		var max = 0;
+			function f(){
+				var imgs = $("img");
+				var i = 0;
+				var timer = setInterval(function(){
+					bar.progressbar("value",(i+1)/ max * 100);
+					var num = parseInt((i+1)/ max * 100);
+					$("#pro_mess").html(parseInt(i+1)/ max * 100 + "%");
+					$(imgs[max - i - 1]).hide("explode",{pieces:80},500);
+					
+					i++;
+					if(i == imgs.length){
+						clearInterval(timer);
+					}
+				},1000);
+				
+				
+			}
+			$(function(){
+				bar = $("#progressbar").progressbar({value:0});
+				max = $("img").length;
+			});
+		</script>
+	</head>
+	<body>
+		<div id="progressbar"></div>
+		<div id="pro_mess">0%</div>
+		<img src="../img/a.png" />
+		<img src="../img/a.png" />
+		<img src="../img/a.png" />
+		<img src="../img/a.png" />
+		<img src="../img/a.png" />
+		<img src="../img/a.png" />
+		<img src="../img/a.png" />
+		<img src="../img/a.png" />
+		<img src="../img/a.png" />
+		<img src="../img/a.png" />
+		
+		
+		<input type="button" onclick="f()" value="点火" />
+		
+	</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>五子棋</title>
+		<script src="../js/jquery.js"></script>
+		<style type="text/css">
+			#wrap{ width: 800px; height: 800px; }
+			.backbg{ width: 100px; height: 100px; float: left;}
+		</style>
+		<script>
+		var bgs = new Array(8); 
+		var id = "";
+		var who = true;
+		var IDs1 = new Array();
+		var IDs2 = new Array();
+		var IDs3 = new Array();
+		var IDs4 = new Array();
+			$(function(){
+				var wrap = $("#wrap");
+			for (var i = 0; i < 8; i++) {
+				bgs[i] = new Array(8);
+				for (var j = 0; j < 8; j++) {
+					id = "" + (i + 1) + "" + j;
+//					console.log(id);
+					var bgimg = f_changeBg(id);
+					wrap.append("<div id='" + id + "' class='backbg' onclick='f("+ id +")' style=' background:url(../img/bg"+ f_changeBg(id) +".gif)'><img src='../img/bg0.gif' /></div>");
+					bgs[i][j] = ("../img/bg.gif");
+				}
+			}
+			
+			});
+			
+			function f(id){
+//				console.log("呵呵呵呵呵呵");
+				//当who为true是白棋先走
+//				console.log(id);
+				if(who){
+					$("#" + id + " img").attr("src","../img/wite.gif");
+				}else{
+					$("#" + id + " img").attr("src","../img/black.gif");
+				}
+				IDs1[0] = id;
+				IDs2[0] = id;
+				IDs3[0] = id;
+				IDs4[0] = id;
+				//判断是否有5个一行的
+				fIsFive(id);
+				who = !who;
+				//移除鼠标事件
+				document.getElementById(id).onclick = a;
+//				alert(document.getElementById(id));
+			}
+			function a(){}
+			function f2(){
+				alert("我被调用了");
+			}
+			function fIsFive(id){
+//				console.log(id);
+				//左右判断
+				f_lr(id);
+				f_ud(id);
+				f_uldr(id);
+				f_rudl(id);
+			}
+			function f_lr(id){
+				var v = parseInt(id - 1);
+				var v1 = parseInt(id + 1);
+				var num = 4;
+				while(num != 0 && v % 10 >= 0){
+					
+					var src1 = $("#" + id + " img").attr("src");
+					var src2 = $("#" + v + " img").attr("src");
+					if(src1 == src2 && src1 != "../img/bg.gif"){
+						IDs1.push(v);
+						num--;
+						if(num == 0){
+							setTimeout(function(){
+								whowin($("#" + id).find("img").attr("src"));
+								//IDs1 = clear(IDs1);
+							},500);
+						}
+					}else{
+//						alert("break了吗？");
+						IDs1 = subArr(IDs1);
+						break;
+					}
+					v--;
+//					console.log("num = " + num);
+				}
+				
+				
+				while(num != 0 && v1 % 10 <= 7){
+//					alert("向右找");
+					var src1 = $("#" + id + " img").attr("src");
+					var src2 = $("#" + v1 + " img").attr("src");
+					if(src1 == src2 && src1 != "../img/bg.gif"){
+						IDs1.push(v1);
+						num--;
+						if(num == 0){
+							setTimeout(function(){
+								whowin($("#" + id).find("img").attr("src"));
+							},2000);
+						}
+					}else{
+						IDs1 = subArr(IDs1);
+						break;
+					}
+					v1++;
+					
+				}
+			}
+			
+			function clear(arr){
+				var src = $("#" + arr[0] + "img").attr("src");
+				who = !who;
+//				alert(arr);
+//				setTimeout(function(){
+					for (var i = 0; i < arr.length; i++) {
+					console.log(arr);
+					$("#" + arr[i] + " img").attr("src","../img/bg0.gif");
+//					$("#" + arr[i]).click(f(arr[i]));
+					document.getElementById(arr[i]).onclick = function(i){
+//						return f(arr[i]);
+					}(i);
+//					arr.shift();
+				}
+//				},500);
+				while(arr.length >= 1){
+					arr.pop();
+				}
+				return arr;
+			}
+			
+			function test(){
+//				alert("test")；
+			}
+			function f_ud(id){
+				var v = parseInt(id - 10);
+				var v1 = parseInt(id + 10);
+				var num = 4;
+				while(num != 0 && v / 10 >= 0){
+					
+					var src1 = $("#" + id + " img").attr("src");
+					var src2 = $("#" + v + " img").attr("src");
+					if(src1 == src2 && src1 != "../img/bg.gif"){
+						IDs2.push(v);
+						num--;
+						if(num == 0){
+							setTimeout(function(){
+								whowin($("#" + id).find("img").attr("src"));
+							},500);
+						}
+					}else{
+//						alert("break了吗？");
+						IDs2 = subArr(IDs2);
+						break;
+					}
+					v-=10;
+//					console.log("num = " + num);
+				}
+				
+				
+				while(num != 0 && v1 / 10 <= 7){
+//					alert("向右找");
+					var src1 = $("#" + id + " img").attr("src");
+					var src2 = $("#" + v1 + " img").attr("src");
+					if(src1 == src2 && src1 != "../img/bg.gif"){
+						IDs2.push(v1);
+						num--;
+						if(num == 0){
+							setTimeout(function(){
+								whowin($("#" + id).find("img").attr("src"));
+							},500);
+						}
+					}else{
+						IDs2 = subArr(IDs2);
+						break;
+					}
+					v1+= 10;
+					
+				}
+			}
+			
+			
+			function f_uldr(id){
+				
+				var v = parseInt(id - 11);
+				var v1 = parseInt(id + 11);
+				var num = 4;
+				while(num != 0 && v % 10 >= 0){
+					
+					var src1 = $("#" + id + " img").attr("src");
+					var src2 = $("#" + v + " img").attr("src");
+					if(src1 == src2 && src1 != "../img/bg.gif"){
+						IDs3.push(v);
+						num--;
+						if(num == 0){
+							setTimeout(function(){
+								whowin($("#" + id).find("img").attr("src"));
+							},500);
+						}
+					}else{
+//						alert("break了吗？");
+						IDs3 = subArr(IDs3);
+						break;
+					}
+					v-=11;
+//					console.log("num = " + num);
+				}
+				
+				
+				while(num != 0 && v1 % 10 <= 7 && v1 / 10 >= 0 && v1 % 10 >= 0 && v1 % 10 <= 7){
+//					alert("向右找");
+					var src1 = $("#" + id + " img").attr("src");
+					var src2 = $("#" + v1 + " img").attr("src");
+					if(src1 == src2 && src1 != "../img/bg.gif"){
+						IDs3.push(v1);
+						num--;
+						if(num == 0){
+							setTimeout(function(){
+								whowin($("#" + id).find("img").attr("src"));
+							},500);
+						}
+					}else{
+						IDs3 = subArr(IDs3);
+						break;
+					}
+					v1+=11;
+					
+				}
+			}
+			
+			
+			function f_rudl(id){
+				var v = parseInt(id - 9);
+				var v1 = parseInt(id + 9);
+//				 IDs4.push(id);
+				var num = 4;
+				while(num != 0 && v % 10 >= 0){
+					
+					var src1 = $("#" + id + " img").attr("src");
+					var src2 = $("#" + v + " img").attr("src");
+					if(src1 == src2 && src1 != "../img/bg.gif"){
+						IDs4.push(v);
+						num--;
+						if(num == 0){
+							setTimeout(function(){
+								whowin($("#" + id).find("img").attr("src"));
+							},500);
+						}
+					}else{
+//						alert("break了吗？");
+						IDs4 = subArr(IDs4);
+						break;
+					}
+					v-=9;
+//					console.log("num = " + num);
+				}
+				
+				
+				while(num != 0 && v1 % 10 <= 7){
+//					alert("向右找");
+					var src1 = $("#" + id + " img").attr("src");
+					var src2 = $("#" + v1 + " img").attr("src");
+					if(src1 == src2 && src1 != "../img/bg.gif"){
+						IDs4.push(v1);
+						num--;
+						if(num == 0){
+							setTimeout(function(){
+								whowin($("#" + id).find("img").attr("src"));
+								//IDs4 = clear(IDs4);
+							},500);
+						}
+					}else{
+						IDs4 = subArr(IDs4);
+						break;
+					}
+					v1+=9;
+					
+				}
+			}
+			function subArr(arr){
+				while(arr.length > 1){
+					arr.pop();
+				}
+//				console.log(arr.length);
+				return arr;
+			}
+		function f_changeBg(id){
+			if(id % 10 == 0){
+				if(parseInt(id / 10 )== 1){
+					return 1;
+				}else if(parseInt(id /10 )== 8){
+					return 2;
+				}else{
+					return 3;
+				}
+			}else
+			if(parseInt(id / 10) == 1){
+				if(id % 10 == 7){
+					return 4;
+				}else if(id % 10 == 0){
+					return 1;
+				}else {
+					return 7;
+				}
+			}else
+			if(id % 10 == 7){
+				if(parseInt(id / 10) == 1){
+					return 4;
+				}else if(parseInt(id / 10 )== 8){
+					return 6;
+				}else{
+					return 5;
+				}
+			}
+			else
+			if(parseInt(id / 10) == 8){
+				if(id % 10 == 0){
+					return 2;
+				}else if(id % 10 == 7){
+					return 6;
+				}else{
+					return 8;
+				}
+			}
+			else{
+				return "";
+			}
+		}
+		function whowin(img){
+			//alert(img);
+			if(img== '../img/wite.gif'){
+				alert("白棋胜！");
+			}else {
+				alert("黑棋胜！");
+			}
+		}
+</script>
+	</head>
+	<body>
+		<div id="wrap">
+				
+		</div>
+		
+	</body>
+</html>

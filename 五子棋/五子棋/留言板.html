@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>留言板</title>
+		<script src="../../jquerry/jquery-1.8.3.js"></script>
+		<script src="../../kindeditor-4.0.1/kindeditor.js"></script>
+		<script>
+			var editor;
+			KindEditor.ready(function(K) {
+				editor = K.create('textarea[name="content"]', {
+					resizeType : 0,
+					allowPreviewEmoticons : false,
+					allowImageUpload : false,
+					items : [
+						'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+				});
+				K('input[name=getHtml]').click(function(e) {
+					alert(editor.html());
+				});
+			});
+			
+			
+			function f(){
+				$("#mydiv").append("<p>" + editor.html() + "</p>");
+			}
+		</script>
+		<style>
+			#kindeditor{ width: 800px; height: 200px; text-align: left; margin-bottom:50px;}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv"></div>
+		<textarea id="kindeditor" name="content">
+			
+		</textarea>
+		<input type="button" value="发表" onclick="f()" />
+		<input type="button" value="点我" name="getHtml" />
+	</body>
+</html>

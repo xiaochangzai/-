@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>打地鼠</title>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/jquery-ui.js"></script>
+		<!--<link href="../js/jquery-ui.css" type="text/css" rel="stylesheet" />-->
+		<script>
+		var isclk = true;
+		var count = 0;
+		var timer;
+			$(function(){
+				
+			timer = setInterval("f1()",3000);
+				
+			});
+			function f1(){
+				var imgs = $("#myimgs img");
+				var n = parseInt(Math.random()*imgs.length);
+				document.getElementById("mydiv").style.left = (n*155) + "px";
+				isclk = true;
+				$("#mydiv").show("drop",{ direction:"down"},1000);
+				if(isclk == true){
+//					alert("true");
+					$("#mydiv").bind("click",fclk);
+				}
+				isclk = false;
+		
+				$("#mydiv").hide("drop",{direction:"down"},1000);
+				setTimeout(function(){
+					
+				
+				
+				if(isclk == false){
+//					alert("false");
+					$("#mydiv").unbind("click");
+				
+				}
+				if(count >= 5){
+						alert("胜利！");
+						clearInterval(timer);
+						count = 0;
+					}
+				},1000);
+//				$("#mydiv").unbind("click")
+	$("#mydiv img").attr("src","../img/a.png");
+			}
+			
+			function fclk(){
+//				alert("阿三");
+					count++;
+					$("#mydiv img").attr("src","../img/b.png");
+					
+			}
+		</script>
+		<style>
+			img{ width: 150px; height: 150px; border: 5px; visibility: visible; position: relative;}
+			#mydiv{ width: 155px; height: 155px; position:absolute; display: none; left: 0; top: 0;}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="myimgs"><img src="../img/c.png" /> <img src="../img/c.png" /> <img src="../img/c.png" /></div><br />
+		<div id="mydiv">
+			<img src="../img/a.png" />
+			
+		</div>
+	</body>
+</html>
